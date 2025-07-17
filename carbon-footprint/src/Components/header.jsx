@@ -27,7 +27,6 @@ function Header() {
             <div className="btns">
                 <button className="btn-primary">Sign Up</button>
                 <button className="btn-secondary">Login</button>
-
             </div>
         </header>
     );

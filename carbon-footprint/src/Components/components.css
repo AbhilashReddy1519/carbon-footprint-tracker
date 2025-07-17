@@ -1,8 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Limelight&family=Poiret+One&display=swap");
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+.center {
+    text-align: center;
+}
+
+p {
+    color: rgb(87, 87, 93);
+}
+
+h1 {
+    font-family: "Limelight", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(26, 94, 171);
+    font-size: 2.5rem;
+}
+
+.limelight-regular {
+    font-family: "Limelight", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .poiret-one-regular {
@@ -22,7 +45,7 @@ header {
     align-items: center;
     background-color: white;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .text {
@@ -73,8 +96,8 @@ li:hover {
     position: relative;
 }
 
-button {
-    background: linear-gradient(135deg , rgb(5, 191, 5),rgb(3, 133, 3));
+.btns > button {
+    background: linear-gradient(135deg, rgb(5, 191, 5), rgb(3, 133, 3));
     color: white;
     font-size: 1.1rem;
     padding: 5px;
@@ -86,11 +109,244 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.btns > button:hover {
     background: white;
     color: green;
 }
 
 main {
     margin-top: 70px;
+}
+
+.div1 {
+    width: auto;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.div1 > h1 {
+    color: rgb(26, 94, 171);
+    font-size: 2.5rem;
+}
+
+.div1 > p {
+    color: rgb(87, 87, 93);
+    font-size: 1rem;
+}
+
+.div2 {
+    background-image: url("../images/landing-img1.png");
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    width: auto;
+    height: 500px;
+    position: relative;
+}
+
+.div2 > div {
+    width: 500px;
+    height: 260px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px black;
+    border-radius: 0px;
+    padding: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.div2 > div > button {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    color: white;
+    font-size: 1.8rem;
+    background-color: rgb(26, 94, 171);
+    border: 1px solid black;
+    width: 60%;
+    cursor: pointer;
+}
+
+.div2 > div > button:hover {
+    background-color: rgb(29, 120, 224);
+}
+
+.div2 > div > h3 {
+    font-size: 1.2rem;
+    color: rgb(92, 92, 97);
+}
+
+.div3 {
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    align-items:center;
+    padding: 30px;
+}
+
+.div3 > div {
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    height: 400px;
+    margin-top: -100px;
+    z-index: 1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.div3 > div > img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.div3 > div > button {
+    padding: 10px;
+    min-width: 150px;
+    border: 1px solid black;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.div3 > div > p {
+    color: rgb(0, 55, 43);
+    font-size: 1.2rem;
+}
+
+.div3 > div:nth-child(1) {
+    color: rgb(19, 168, 216);
+}
+
+.div3 > div:nth-child(1) > button {
+    color: white;
+    background-color: rgb(19, 168, 216);
+}
+
+.div3 > div:nth-child(2) {
+    color: rgb(240, 158, 23);
+}
+
+.div3 > div:nth-child(2) > button {
+    color: white;
+    background-color: rgb(240, 158, 23);
+}
+
+.div3 > div:nth-child(3) {
+    color: rgb(100, 195, 125);
+}
+
+.div3 > div:nth-child(3) > button {
+    color: white;
+    background-color: rgb(100, 195, 125);
+}
+
+.div3 > div:nth-child(3) > button:hover {
+    color: white;
+    background-color: rgb(56, 143, 79);
+}
+
+.div3 > div:nth-child(2) > button:hover {
+    color: white;
+    background-color: rgb(171, 112, 17);
+}
+
+.div3 > div:nth-child(1) > button:hover {
+    color: white;
+    background-color: rgb(10, 109, 142);
+}
+
+.div4 {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin: 30px 15%;
+    gap: 5rem;
+}
+
+.calc {
+    display: flex;
+    align-items: center;
+}
+
+.calc > div > img {
+    width: 100px;
+    height: 100px;
+}
+
+.calc > h1 {
+    font-size: 10rem;
+    align-items: center;
+}
+
+.div4 > div > p {
+    text-align:start;
+    padding: 20px 10px;
+}
+
+.div5 > div {
+    position: relative;
+}
+
+.div5 > div > img {
+    width: 100%;
+    height: 100%;
+}
+
+.div5 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10px 30px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.div5 > div > h1 {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.div6 > div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.div6 > div > button {
+    background-color: white;
+    border: none;
+    border-top: 5px solid white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 0 10px;
+    padding: 10px;
+    z-index: 0;
+}
+
+
+.div6 > div > button:hover {
+    border-top: 5px solid rgb(26, 94, 171);
+    color: rgb(26, 94, 171);
 }

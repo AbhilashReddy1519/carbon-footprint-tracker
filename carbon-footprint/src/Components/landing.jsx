@@ -1,16 +1,15 @@
+import Home from "../screens/home";
 import Footer from "./footer";
 import Header from "./header";
 
 const Landing = () => {
-    return(
+    return (
         <>
             <Header />
-            <main>
-                <h1>Hi</h1>
-            </main>
+            <Home />
             <Footer />
         </>
-    )
-}
+    );
+};
 
 export default Landing;
