@@ -6,8 +6,25 @@ import hand from "../images/hand.png";
 import climate from "../images/climate.png";
 import forest from "../images/forest.png";
 import communities from "../images/communities.png";
+import { useState } from "react";
+import How from "../utils/how";
+import About from "../utils/about";
+import story from "../images/story.png";
 
 function Home() {
+    const [component, setComponent] = useState("how");
+
+    const renderComponent = () => {
+        switch (component) {
+            case "how":
+                return <How />;
+            case "about":
+                return <About />;
+            default:
+                return null;
+        }
+    };
+
     return (
         <>
             <main>
@@ -131,21 +148,66 @@ function Home() {
                         </h1>
                     </div>
                 </div>
-                <div className="div6" style={{margin: "0 40px"}}>
-                    <h1 className="center" style={{margin: "4rem 10px"}}>MORE ABOUT THIS CALCULATOR</h1>
-                    <hr style={{ height: '3px', backgroundColor: "rgb(87, 87, 93)", margin: "0"}} />
-                    <div style={{marginTop: "-0.4px"}}>
-                        <button className="poiret-one-regular">How it works</button>
-                        <button className="poiret-one-regular">About Us</button>
+                <div className="div6" style={{ margin: "0 40px" }}>
+                    <h1 className="center" style={{ margin: "4rem 10px" }}>
+                        MORE ABOUT THIS CALCULATOR
+                    </h1>
+                    <hr
+                        style={{
+                            height: "3px",
+                            backgroundColor: "rgb(87, 87, 93)",
+                            margin: "0",
+                        }}
+                    />
+                    <div style={{ marginTop: "-0.4px" }}>
+                        <button
+                            className={`poiret-one-regular ${
+                                component === "how" ? "borderTop" : ""
+                            }`}
+                            onClick={() => setComponent("how")}>
+                            How it works
+                        </button>
+                        <button
+                            className={`poiret-one-regular ${
+                                component === "about" ? "borderTop" : ""
+                            }`}
+                            onClick={() => setComponent("about")}>
+                            About Us
+                        </button>
                     </div>
                 </div>
-                <div className="div7">
-                    
+                <div className="div7">{renderComponent()}</div>
+                <div
+                    className="div8"
+                    style={{ position: "relative", margin: "20px 0" }}>
+                    <img
+                        src={story}
+                        alt="forest"
+                        width={"100%"}
+                        height={"600px"}
+                    />
+                    <div className="story">
+                        <h2>A global conservation story </h2>
+                        <p>
+                            Conservation International works to spotlight and
+                            secure the critical benefits that nature provides to
+                            humanity. Since our inception, we’ve helped to
+                            protect more than 6 million square kilometers (2.3
+                            million square miles) of land and sea across more
+                            than 70 countries. Currently with offices in 29
+                            countries and 2,000 partners worldwide, our reach is
+                            truly global.
+                        </p>
+                        <p>
+                            Your contributions support our science, policy work
+                            and partnerships as we seek to solve the climate
+                            crisis and create a cleaner, healthier planet.
+                        </p>
+                    </div>
                 </div>
             </main>
         </>
     );
 }
-
 
 export default Home;

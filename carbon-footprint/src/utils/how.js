@@ -1,6 +1,6 @@
 const How = () => {
     return (
-        <div>
+        <>
             <p>
                 Our carbon calculator is easy to use — and it will deliver your
                 total estimated personal carbon emissions about as accurately as
@@ -27,6 +27,8 @@ const How = () => {
                 figures in CO<sub>2</sub> equivalents (CO<sub>2</sub>e), where 1
                 metric ton of carbon = 3.67 metric ton of carbon dioxide.
             </p>
-        </div>
+        </>
     );
 };
+
+export default How;
