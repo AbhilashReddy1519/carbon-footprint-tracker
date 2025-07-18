@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Limelight&family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Limelight&family=Londrina+Shadow&family=Poiret+One&display=swap");
+
+.londrina-shadow-regular {
+    font-family: "Londrina Shadow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 * {
     padding: 0;
@@ -167,7 +173,8 @@ main {
 }
 
 .div2 > div > button {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     padding: 10px;
     color: white;
     font-size: 1.8rem;
@@ -189,9 +196,9 @@ main {
 .div3 {
     width: auto;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    align-items:center;
+    align-items: center;
     padding: 30px;
 }
 
@@ -299,7 +306,7 @@ main {
 }
 
 .div4 > div > p {
-    text-align:start;
+    text-align: start;
     padding: 20px 10px;
 }
 
@@ -345,7 +352,6 @@ main {
     z-index: 0;
 }
 
-
 .div6 > div > button:hover {
     border-top: 5px solid rgb(26, 94, 171);
     color: rgb(26, 94, 171);
@@ -355,7 +361,6 @@ main {
     border-bottom: 3px solid rgb(26, 94, 171);
     color: rgb(26, 94, 171);
 }
-
 
 .div7 {
     margin: 20px 20%;

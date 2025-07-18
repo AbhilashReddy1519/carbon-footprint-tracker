@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Limelight&family=Londrina+Shadow&family=Poiret+One&display=swap");
+
+.londrina-shadow-regular {
+    font-family: "Londrina Shadow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.can1 {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.can1 > div {
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+}
+
+.can2 {
+    margin-top: 30px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background: linear-gradient(120deg, darkgreen, green, lightgreen);
+    margin-bottom: 20px;
+}
+
+.can2 > h1 {
+    color: white;
+}
+
+.footerBar {
+    height: 16px;
+    background: white;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: -52px;
+    z-index: 1;
+    position: relative;
+}
+
+.can3 {
+    width: 90%;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.can31 {
+    background-color: black;
+    height: auto;
+    padding: 40px;
+}
+
+.can31 > h1 {
+    color: white;
+    font-size: 4rem;
+}
+
+.can31 > p {
+    color: whitesmoke;
+    font-size: 1rem;
+    margin: 20px 0;
+}
+
+.can31 > button {
+    padding: 5px;
+    border-radius: 0;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    font-size: larger;
+}
+
+.red1 {
+    background-color: rgb(0, 140, 90);
+    width: auto;
+    height: 200px;
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.red1 > h1 {
+    color: white;
+}
+
+.red2 p {
+    color: rgb(0, 72, 64);
+    font-size: 1rem;
+    text-align: start;
+    margin: 20px 0;
+}
+
+.red2 > img {
+    width: 80%;
+    margin: 10%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.red2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 30px;
+}
+
+.red21 > h2 {
+    font-size: 29px;
+}
+
+.red21 {
+    padding: 10%;
+    color: rgb(0, 118, 71);
+}

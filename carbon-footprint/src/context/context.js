@@ -9,8 +9,14 @@ const ContextProvider = ({ children }) => {
         setlanding(land);
     };
 
+    const [main, setMain] = useState("home");
+
+    const changeMain = (ele) => {
+        setMain(ele);
+    }
+
     return (
-        <Context.Provider value={{ landing, changeLanding }}>
+        <Context.Provider value={{ landing, main, changeLanding , changeMain}}>
             {children}
         </Context.Provider>
     );

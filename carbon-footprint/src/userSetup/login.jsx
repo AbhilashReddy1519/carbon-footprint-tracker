@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import "./user.css";
 import { useNavigate } from "react-router-dom";
 import Context from "../context/context";
+import { userLogin } from "../apis/utils/userLogin";
 
 const Login = () => {
     const {changeLanding} = useContext(Context);
@@ -10,10 +11,20 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Your login logic here
-        console.log("Logging in with:", { email, password });
+    const handleSubmit = async (e) => {
+        try {
+            e.preventDefault();
+            console.log("Logging in with:", { email, password });
+            const success = await userLogin({ email, password });
+            if (success) {
+                navigate('/calculator');
+            } else {
+                alert("Login failed: Invalid email or password.");
+            }
+        } catch (error) {
+            console.log(error);
+            alert("An error occurred during login. Please try again.");
+        }
     };
 
     return (
