@@ -1,8 +1,8 @@
-const { connect } = require('mongoose');
+const { connect } = require("mongoose");
+require("dotenv").config();
 
-const MONGODB_URL = "mongodb+srv://abhilash0505abhi:Abhi%402005@cluster0.jaioa7v.mongodb.net";
-
-const DB_NAME = "carbon-footprint";
+const MONGODB_URL = process.env.MONGODB_URL;
+const DB_NAME = process.env.MONGODB_DB_NAME;
 
 async function connectDB() {
     try {

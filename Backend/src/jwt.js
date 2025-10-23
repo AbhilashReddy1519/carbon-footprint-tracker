@@ -1,23 +1,21 @@
 const jwt = require("jsonwebtoken");
 
-const SECRET_KEY = 'MAPS';
+require("dotenv").config();
+const SECRET_KEY = process.env.JWT_SECRET_KEY;
 
 const generateToken = (payload) => {
-    const token = jwt.sign(payload, SECRET_KEY, {expiresIn: "1h"});
+    const token = jwt.sign(payload, SECRET_KEY, { expiresIn: "1h" });
     return token;
 };
 
 const verifyToken = (token) => {
     try {
         const payload = jwt.verify(token, SECRET_KEY);
-        return {isValidToken: true, payload };
+        return { isValidToken: true, payload };
     } catch (err) {
         console.log(err);
-        return {isValidToken: false, payload: undefined};
+        return { isValidToken: false, payload: undefined };
     }
 };
 
-module.exports = { generateToken, verifyToken }; 
-
-
-
+module.exports = { generateToken, verifyToken };
